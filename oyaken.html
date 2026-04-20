@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>父親の親権はどうやって剥奪されるか ── 連れ子養子縁組の構造と、共同親権の限界</title>
+<meta name="description" content="日本の民法では、離婚後の母親が再婚すれば、実父の同意なしに養子縁組が成立し、実父の親権は消滅する。2026年4月施行の共同親権でも、この構造は本質的に変わらない。条文と公式情報に基づいて解説。">
+<meta property="og:title" content="父親の親権はどうやって剥奪されるか ── 連れ子養子縁組の構造と、共同親権の限界">
+<meta property="og:description" content="連れ子養子縁組によって実父の親権は消滅する。共同親権施行後も家裁の許可で覆せる ── 制度の構造解説。">
+<link rel="stylesheet" href="s.css">
+<style>
+.lead-box{background:#1a1a1a;color:#e8e4dc;padding:32px 28px;margin:24px 0;font-family:'Noto Serif JP',serif;font-size:16px;line-height:2.0;text-align:justify}
+.lead-box p{margin:12px 0}
+h3{font-family:'Noto Serif JP',serif;font-size:17px;margin:32px 0 12px;color:#1a1a1a;padding-left:12px;border-left:4px solid #c4a35a}
+.law{background:#f5f3ec;padding:18px 22px;margin:18px 0;font-size:15px;line-height:1.9;border-left:4px solid #999;font-family:'Noto Serif JP',serif}
+.law .ref{display:block;font-size:13px;color:#666;margin-bottom:6px;font-style:italic}
+.law .body{font-weight:400}
+.law .body b{font-weight:700;background:#fff8e1;padding:1px 4px}
+.callout-box{background:#fff;border:2px solid #c4a35a;padding:22px 26px;margin:24px 0;font-size:15px;line-height:1.9}
+.callout-box .label{display:block;font-family:'Noto Serif JP',serif;font-size:13px;color:#c4a35a;letter-spacing:0.15em;margin-bottom:10px;font-weight:700}
+.summary-box{background:#fff8e1;border:1px solid #c4a35a;padding:24px 28px;margin:32px 0;font-size:15px;line-height:1.9}
+.summary-box h4{font-family:'Noto Serif JP',serif;font-size:17px;margin-bottom:14px;color:#1a1a1a;padding-bottom:8px;border-bottom:2px solid #c4a35a}
+.summary-box ol{padding-left:24px}
+.summary-box ol li{margin:8px 0}
+.summary-box .conclusion{margin-top:16px;padding-top:14px;border-top:1px solid #c4a35a;font-weight:700}
+.flow-box{background:#0d0d0d;color:#e8e4dc;padding:24px 20px;margin:28px 0}
+.flow-box .title{font-size:13px;color:#c4a35a;letter-spacing:0.15em;margin-bottom:16px;font-weight:700;text-align:center;font-family:'Noto Serif JP',serif}
+.flow-box .step{background:#1a1a1a;border:1px solid #333;padding:12px 16px;margin:6px 0;font-size:14px;text-align:center;line-height:1.7}
+.flow-box .step.bad{border-color:#c4a35a;color:#fff}
+.flow-box .arrow{text-align:center;color:#c4a35a;font-size:16px;margin:4px 0}
+.facts{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+.facts th,.facts td{border:1px solid #ddd;padding:12px 14px;text-align:left;line-height:1.7;vertical-align:top}
+.facts th{background:#f0ede6;font-weight:700;font-family:'Noto Serif JP',serif;width:30%;white-space:nowrap}
+.steps{margin:20px 0;counter-reset:step}
+.steps .step{counter-increment:step;background:#fff;border:1px solid #ddd;padding:18px 22px 18px 64px;margin:10px 0;position:relative;font-size:15px;line-height:1.9}
+.steps .step::before{content:counter(step);position:absolute;left:18px;top:18px;width:32px;height:32px;background:#1a1a1a;color:#c4a35a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:16px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.compare .col{background:#fff;border:1px solid #ddd;padding:18px}
+.compare .col h4{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid #c4a35a}
+.compare .col p{font-size:14px;line-height:1.8;margin:6px 0}
+.back-link{display:block;text-align:center;margin:32px 0;padding:18px;background:#1a1a1a;color:#e8e4dc;text-decoration:none;font-size:14px}
+.back-link:hover{background:#333}
+@media(max-width:600px){.compare{grid-template-columns:1fr}.facts th{width:35%;font-size:13px}.facts td{font-size:14px}.lead-box{padding:24px 20px;font-size:15px}}
+</style>
+</head>
+<body>
+
+<div class="top">
+<h1 style="text-align:center">父親の親権はどうやって剥奪されるか</h1>
+<p class="sub" style="text-align:center">連れ子養子縁組の構造と、共同親権の限界</p>
+<a href="index.html">← 目次に戻る</a>
+</div>
+
+<div class="container">
+
+<div class="lead-box">
+<p>日本の民法では、離婚後の母親が再婚すれば、実父の同意なしに養子縁組が成立し、実父の親権は消滅する ── という制度設計になっている。</p>
+<p>2026年4月1日に施行された共同親権制度は、この構造を本質的には変えていない。共同親権下でも、家庭裁判所の許可があれば、実父の反対を押し切って養子縁組を成立させることができる。そして、すでに離婚している家庭については、共同親権制度はそもそも適用されない。</p>
+<p>本稿は、この制度がどのように機能し、なぜ共同親権の導入がこの問題を解決しないのかを、民法の条文と法務省の公式情報に基づいて解説するものである。</p>
+</div>
+
+<h2 class="sec-title">第1章　まず、現状の制度を理解する</h2>
+
+<h3>1-1.「親権」と「親子関係」は別のもの</h3>
+
+<p>多くの人は混同しているが、日本の民法では「親権」と「親子関係（法律上の親子であること）」は明確に別の概念として整理されている。</p>
+
+<div class="compare">
+<div class="col">
+<h4>親権</h4>
+<p>未成年の子について、監護・教育・財産管理を行う権利と義務。離婚すれば、どちらか一方（または2026年4月以降は共同で）が持つ。</p>
+<p>養子縁組によって、実親から養親に移転する。</p>
+</div>
+<div class="col">
+<h4>親子関係</h4>
+<p>戸籍上の親子であること。普通養子縁組では、養子縁組をしても実父母との親子関係は消えない（扶養義務・相続権は残る）。</p>
+<p>ただし、特別養子縁組では実父母との親子関係も終了する。</p>
+</div>
+</div>
+
+<p>つまり、養子縁組によって実父が失うのは「親権」である。「親子であること」は ── 普通養子縁組の場合 ── 戸籍上は残る。しかし、子の生活への関与・面会の根拠・教育や進学への発言権など、現実に「父親として何かをする」ための法的権限は、ほぼすべて失われる。</p>
+
+<h3>1-2. 連れ子養子縁組とは何か</h3>
+
+<p>離婚後、母親が再婚し、新しい夫が母親の子（前夫との子）を養子にする手続きを、「連れ子養子縁組」と呼ぶ。法律上は「普通養子縁組」の一形態である。</p>
+
+<div class="law">
+<span class="ref">民法 第798条（未成年者を養子とする場合の許可）</span>
+<span class="body">未成年者を養子とするには、家庭裁判所の許可を得なければならない。<b>ただし、自己又は配偶者の直系卑属を養子とする場合は、この限りでない。</b></span>
+</div>
+
+<p>注目すべきは、ただし書きである。<b>配偶者の連れ子を養子にする場合は、家庭裁判所の許可が不要</b>とされている。これは、再婚家庭の養子縁組を簡易化するために設けられた例外規定だが、結果として、家庭裁判所による事前審査を一切経ずに養子縁組が成立することを意味する。</p>
+
+<h3>1-3. 役所への届出だけで成立する</h3>
+
+<p>連れ子養子縁組の手続きは、極めて簡素である。</p>
+
+<div class="steps">
+<div class="step"><b>母親と再婚相手の合意。</b>養子となる子が15歳未満の場合、子本人の同意は不要。母親（親権者）が代理で同意する（民法797条1項）。</div>
+<div class="step"><b>市区町村役場への養子縁組届の提出。</b>家庭裁判所の許可は不要。役場は要件を満たせば受理する。</div>
+<div class="step"><b>受理されれば、その日から養子縁組が成立。</b>養親が新たに親権者となり、実親（実父）の親権は消滅する。戸籍上、子は養親の姓に変わる。</div>
+</div>
+
+<h3>1-4. 実父への通知義務はない</h3>
+
+<p>この一連の手続きにおいて、<b>実父への通知義務は法律上一切存在しない</b>。母親と再婚相手が役所に届出を出し、受理されれば、それで完結する。実父は ── 自分の子が法律上、他人の子になったことを ── 後から偶然知ることになる。</p>
+
+<div class="callout-box">
+<span class="label">確認</span>
+ここまでの内容は、離婚後の親権者が母親であり（日本では離婚後の親権の約9割が母親）、母親が再婚し、新しい夫が連れ子と養子縁組する、という極めて典型的な経路を前提としている。これは特殊な事例ではなく、日本社会で日常的に起きている標準的な手続きである。
+</div>
+
+<h2 class="sec-title">第2章　養子縁組が成立すると、実父に何が起きるか</h2>
+
+<p>養子縁組が成立した瞬間、実父は次のすべてを失う。</p>
+
+<table class="facts">
+<tr><th>親権</th><td>消滅する。養親（再婚相手）に移転する。</td></tr>
+<tr><th>監護権</th><td>消滅する。子の生活全般について、法的な発言権を失う。</td></tr>
+<tr><th>居所指定権</th><td>消滅する。子がどこに住むか、誰と暮らすかについて関与できなくなる。</td></tr>
+<tr><th>進学・教育への関与</th><td>法的な権限を失う。学校との関係は養親が担う。</td></tr>
+<tr><th>医療同意</th><td>消滅する。子の手術・治療への同意は養親が行う。</td></tr>
+<tr><th>面会交流</th><td>養子縁組自体を理由に面会を禁止することはできないが、現実には養親家庭との関係悪化により事実上途絶することが多い。</td></tr>
+<tr><th>戸籍</th><td>子は養親の姓を名乗る。実父の姓ではなくなる。</td></tr>
+<tr><th>親子関係（法的）</th><td>普通養子縁組の場合は残る。扶養義務・相続権は維持される。ただし「親権を持つ親」ではない。</td></tr>
+<tr><th>通知</th><td>受けない。事後に知る。</td></tr>
+</table>
+
+<p>法律上「親子」ではあり続けるが、「父親としてできること」は、ほぼゼロになる。実父は、戸籍の片隅にだけ名前が残る存在となる。</p>
+
+<h2 class="sec-title">第3章　なぜ共同親権導入でも、この構造は変わらないのか</h2>
+
+<h3>3-1. 2026年4月1日、共同親権が施行された</h3>
+
+<p>70年以上続いた単独親権制度に終止符が打たれ、離婚後も父母双方が親権を持つ「共同親権」が選択できるようになった。これは戦後家族法の歴史において最大の制度変更のひとつである。</p>
+
+<p>しかし、共同親権の導入は、連れ子養子縁組による実父の親権剥奪を止める仕組みにはなっていない。理由は3つある。</p>
+
+<h3>3-2. 理由①　すでに離婚している家庭は、共同親権制度の外にある</h3>
+
+<div class="law">
+<span class="ref">改正民法附則 / 法務省解説</span>
+<span class="body">2026年3月31日までに離婚が成立している場合、自動的に共同親権に変更されることはない。共同親権を希望する場合は、家庭裁判所に親権者変更の調停を申し立てる必要がある。</span>
+</div>
+
+<p>つまり、現時点で離婚後の単独親権下にある家庭 ── 統計上、数百万世帯 ── は、特段の手続きを取らない限り、これまで通り単独親権が続く。</p>
+
+<p>そして単独親権下では、母親が再婚相手と連れ子養子縁組をする際、<b>実父の同意は法律上一切不要</b>のままである。</p>
+
+<h3>3-3. 理由②　共同親権下でも、家裁の許可で覆せる</h3>
+
+<p>2026年4月以降に共同親権を選択した家庭では、養子縁組には父母双方の同意が必要となる。これは確かに前進である。しかし、改正民法には次の規定が置かれている。</p>
+
+<div class="law">
+<span class="ref">改正民法 第797条第4項</span>
+<span class="body">父母の意見対立を家庭裁判所が調整する手続きを新たに設けた。家庭裁判所は、子の利益のために特に必要がある場合に限り、父母の一方を養子縁組についての親権行使者として指定することができる。指定された親権行使者は単独で養子縁組の手続きをすることができる。</span>
+</div>
+
+<p>つまり、共同親権下で実父が養子縁組に反対しても、母親が家庭裁判所に申立てを行い、裁判所が「子の利益のために必要」と判断すれば、実父の同意なしに養子縁組が成立する。</p>
+
+<p>家庭裁判所の判断は、調査官による事実調査と裁判官の判断に委ねられる。家庭裁判所の運用が母親側に有利な傾向を持つことは、長年指摘されてきた構造的問題であり、共同親権の導入によってこの判断傾向が即座に変わるとは限らない。</p>
+
+<h3>3-4. 理由③　子が15歳以上なら、実父の同意は元から不要</h3>
+
+<div class="law">
+<span class="ref">民法 第797条第1項（改正前後共通）</span>
+<span class="body">養子となる者が十五歳未満であるときは、その法定代理人が、これに代わって、縁組の承諾をすることができる。</span>
+</div>
+
+<p>この条文の裏側を読めば、<b>15歳以上の子は自分の意思だけで養子縁組ができる</b>ことになる。養子縁組届に子本人が署名すれば、共同親権下であっても、実父の同意なしに養子縁組は成立する。</p>
+
+<p>15歳の子が、同居する母親と再婚相手の説得に抗うことができるかは、現実的には極めて難しい。日常生活を共にし、生活費を依存している相手の意向に逆らうことは、未成年者にとって事実上不可能に近い。</p>
+
+<div class="summary-box">
+<h4>共同親権導入後も残る、3つの抜け穴</h4>
+<ol>
+<li><b>すでに離婚済み。</b>　単独親権が継続するため、養子縁組に実父の同意は不要。</li>
+<li><b>共同親権下でも、家裁の許可で覆せる。</b>　改正民法797条4項により、家庭裁判所が「子の利益」と判断すれば、実父の反対を押し切れる。</li>
+<li><b>子が15歳以上。</b>　子本人の意思のみで成立。実父の同意は元から不要。</li>
+</ol>
+<p class="conclusion">結論：共同親権の導入は、連れ子養子縁組による実父の親権剥奪を止める制度的歯止めにはなっていない。法改正は前進であるが、根本構造は維持されている。</p>
+</div>
+
+<h2 class="sec-title">第4章　この構造が現実に何を生み出しているか</h2>
+
+<h3>4-1. 統計が示す傾向</h3>
+
+<p>厚生労働省「子ども虐待による死亡事例等の検証結果」（社会保障審議会児童部会）によれば、心中以外の虐待死における加害者は、実母が最も多いものの、実父以外の男性（継父・母親の交際相手・養父など）の関与する割合は、世帯構成比に対して有意に高いことが繰り返し報告されている。</p>
+
+<p>同様の傾向は国際的にも観察されている。継父家庭における児童虐待リスクの上昇は、社会学・進化心理学の分野で「シンデレラ効果（Cinderella effect）」として広く研究されてきた現象である。</p>
+
+<h3>4-2. 制度設計と現実の接続</h3>
+
+<div class="flow-box">
+<div class="title">日本の制度設計が生み出す典型的経路</div>
+<div class="step">離婚（約9割で母親が単独親権）</div>
+<div class="arrow">↓</div>
+<div class="step">実父との関係が制度的に希薄化（面会交流は月1回程度が運用標準）</div>
+<div class="arrow">↓</div>
+<div class="step">母親の再婚</div>
+<div class="arrow">↓</div>
+<div class="step bad">連れ子養子縁組（実父への通知なし、家裁許可不要）</div>
+<div class="arrow">↓</div>
+<div class="step bad">継父との同居生活開始（実父は法的に介入できない）</div>
+<div class="arrow">↓</div>
+<div class="step bad">継父による加害が起きた場合、実父は子の異変を把握する手段を持たない</div>
+</div>
+
+<p>この経路の各段階は、すべて現行法に従った正規の手続きである。違法な行為は何ひとつ含まれていない。にもかかわらず、結果として、実父は子の安全に関与する一切の手段を奪われた状態に置かれる。</p>
+
+<h3>4-3. 2026年4月、京都府南丹市で起きたこと</h3>
+
+<p>2026年4月13日、京都府南丹市の山中で、小学6年生の男児（11）の遺体が発見された。同月16日、母親の再婚相手で養父である男性（37）が死体遺棄容疑で逮捕された。捜査関係者によれば、容疑者は供述で殺害もほのめかしているとされる。</p>
+
+<p>報道によれば、母親は元シングルマザーであり、京丹波町の工場で容疑者と知り合い、2025年12月に再婚。同時期に容疑者は男児と養子縁組をし、戸籍上の父となっていた。再婚から事件発生まで、約4ヶ月。</p>
+
+<p>男児は加害者の姓で報道されている。実父についての情報は、現時点で公表されたものの中に存在しない。</p>
+
+<div class="callout-box">
+<span class="label">本稿の立場</span>
+この事件の刑事責任は、捜査と司法の手続きを通じて明らかにされるべきものであり、本稿はそれを代行するものではない。本稿が指摘するのは、この種の事件が起きる「条件」を、日本の現行制度が構造的に量産している、という事実である。<br><br>
+連れ子養子縁組によって実父が法的に排除され、継父との密室的な家庭関係が形成される ── この経路に立った家庭は、日本に何万、何十万と存在する。そのほとんどは平穏に暮らしている。しかし、確率的に一定数で問題が起きることは、統計上既に予見されている。
+</div>
+
+<h2 class="sec-title">第5章　本稿の結論</h2>
+
+<div class="summary-box">
+<h4>制度的事実の確認</h4>
+<ol>
+<li>日本の民法では、母親と再婚相手の合意のみで連れ子養子縁組が成立する。実父の同意・通知は不要である。家庭裁判所の許可も不要である（民法798条但書）。</li>
+<li>養子縁組成立により、実父の親権は消滅する。実父は子の生活・教育・医療・居所について、法的に関与する手段を失う。</li>
+<li>2026年4月施行の共同親権制度は、この構造を本質的には変えていない。すでに離婚済みの家庭、共同親権下でも家裁の許可があるケース、15歳以上の子のケース ── 3つの抜け穴が残されている。</li>
+<li>この制度設計は、継父との密室的な家庭関係を統計的に量産しており、児童虐待死における継父関与率の高さは、複数の公的統計で繰り返し確認されている。</li>
+</ol>
+</div>
+
+<p>本稿が問うているのは、個別の事件の責任ではない。問うているのは、「実父の同意なしに、その子を法的に他人の子に変えることができる」という制度設計を、日本社会が当たり前のものとして維持してきたこと、そして共同親権の導入によってもこの構造が温存されたままであること、である。</p>
+
+<p>この制度を変えるかどうかは、最終的には立法府の判断であり、その立法府を選ぶ有権者の判断である。本稿は判断材料を提供するものに過ぎない。</p>
+
+<p>ただ、ひとつだけ事実として記しておく。<b>2026年4月、共同親権制度が施行された月に、京都府の山中で、加害者の姓を着せられた11歳の少年の遺体が発見された。</b>この事実は、制度がまだ何も変えていないことを示している。</p>
+
+<a class="back-link" href="tanba.html">← 短文版（丹波小学生殺害事件の重要問題）に戻る</a>
+
+</div>
+
+<div class="back">
+<a href="index.html">← 目次に戻る</a>
+</div>
+
+<div class="footer">
+<p>本稿は、民法の条文、法務省の公式情報、報道された事実に基づいて構成されています。<br>
+法的判断・刑事責任の認定は、所管の司法機関に委ねられるべきものです。</p>
+<p style="margin-top:8px;font-size:11px;opacity:0.6">最終更新：2026年4月20日</p>
+</div>
+
+<img src="https://nakamurake.com/px.php?p=aio_oyaken.html" style="position:absolute;width:1px;height:1px;opacity:0" alt="">
+</body>
+</html>
